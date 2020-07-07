@@ -1,20 +1,23 @@
 package com.homework_5.generic.with_interface;
 
+import com.homework_5.generic.interfaces.Addable;
+
 import java.util.ArrayList;
 
-public class MyListMod<T extends Comparable> implements Comparable {
+public class MyListMod<T extends Comparable> implements Addable<T> {
     private ArrayList<T> list;
 
     public MyListMod() {
         list = new ArrayList<>();
     }
 
-    public void add(T numberClass) {
-        list.add(numberClass);
+    @Override
+    public void add(T item) {
+        list.add(item);
     }
 
-    public void print() {
-        System.out.print("My list is: ");
+    public void print(String text) {
+        System.out.print("My " + text + " is: ");
         for (T i : list) {
             System.out.print(i + " ");
         }
@@ -32,14 +35,9 @@ public class MyListMod<T extends Comparable> implements Comparable {
                 }
             }
         }
-        System.out.print("My sort list is: ");
-        for (T i : list) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
     }
 
-    public T largest() {
+    public T getLargest() {
         T value = list.get(0);
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).compareTo(value) > 0) {
@@ -49,7 +47,7 @@ public class MyListMod<T extends Comparable> implements Comparable {
         return value;
     }
 
-    public T smallest() {
+    public T getSmallest() {
         T value = list.get(0);
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).compareTo(value) < 0) {
@@ -57,10 +55,5 @@ public class MyListMod<T extends Comparable> implements Comparable {
             }
         }
         return value;
-    }
-
-    @Override
-    public int compareTo(Object o) {
-        return 0;
     }
 }
