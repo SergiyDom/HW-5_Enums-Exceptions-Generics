@@ -3,9 +3,6 @@ package com.homework_5.generic.with_interface;
 import java.util.ArrayList;
 
 public class MyListMod<T extends Comparable> implements Comparable {
-    //public class MyL <T> implements Comparable<MyL<T>> {
-    // public class MyL <T extends Comparable>{
-    //public class MyL <T extends Comparable<T>>{
     private ArrayList<T> list;
 
     public MyListMod() {
