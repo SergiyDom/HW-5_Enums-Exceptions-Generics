@@ -1,4 +1,4 @@
-package com.homework_5.task_3;
+package com.homework_5.generic.with_parameter;
 
 public class HighestLowestElements<T extends Comparable> {
     private T[] arr;

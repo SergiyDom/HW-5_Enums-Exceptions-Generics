@@ -1,8 +1,8 @@
-package com.homework_5;
+package com.homework_5.generic;
 
-import com.homework_5.task_1.MyList;
-import com.homework_5.task_2.MyListMod;
-import com.homework_5.task_3.HighestLowestElements;
+import com.homework_5.generic.with_class.MyList;
+import com.homework_5.generic.with_interface.MyListMod;
+import com.homework_5.generic.with_parameter.HighestLowestElements;
 
 public class Main {
     public static void main(String[] args) {

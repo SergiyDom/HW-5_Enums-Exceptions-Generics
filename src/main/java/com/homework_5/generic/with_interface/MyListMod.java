@@ -1,4 +1,4 @@
-package com.homework_5.task_2;
+package com.homework_5.generic.with_interface;
 
 import java.util.ArrayList;
 
