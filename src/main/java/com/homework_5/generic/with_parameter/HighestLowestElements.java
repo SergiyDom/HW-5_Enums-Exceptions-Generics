@@ -7,7 +7,7 @@ public class HighestLowestElements<T extends Comparable> {
         this.arr = arr;
     }
 
-    public T higest() {
+    public T getHighest() {
         T max = arr[0];
         for (T count : arr) {
             if (count.compareTo(max) > 0) {
@@ -17,7 +17,7 @@ public class HighestLowestElements<T extends Comparable> {
         return max;
     }
 
-    public T lowest() {
+    public T getLowest() {
         T min = arr[0];
         for (T count : arr) {
             if (count.compareTo(min) < 0) {

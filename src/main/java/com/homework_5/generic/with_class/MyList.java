@@ -1,16 +1,20 @@
 package com.homework_5.generic.with_class;
 
+import com.homework_5.generic.interfaces.Addable;
+
 import java.util.ArrayList;
 
-public class MyList<T extends Number> {
+public class MyList<T extends Number> implements Addable<T> {
     private ArrayList<T> list;
 
     public MyList() {
         list = new ArrayList<>();
     }
 
-    public void add(T numberClass) {
-        list.add(numberClass);
+    @Override
+    public void add(T item) {
+        list.add(item);
+
     }
 
     public void print() {
@@ -39,7 +43,7 @@ public class MyList<T extends Number> {
         System.out.println();
     }
 
-    public T largest() {
+    public T detLargest() {
         T value = list.get(0);
         for (int i = 1; i < list.size(); i++) {
             if (list.get(i).doubleValue() > value.doubleValue()) {
@@ -49,7 +53,7 @@ public class MyList<T extends Number> {
         return value;
     }
 
-    public T smallest() {
+    public T getSmallest() {
         T value = list.get(0);
         for (int i = 1; i < list.size(); i++) {
             if (list.get(i).doubleValue() < value.doubleValue()) {
